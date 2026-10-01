@@ -442,14 +442,15 @@ strong {
   color: var(--red);
 }
 
-/* o brilho do cabeçalho é mais discreto que o do fecho */
-.header__logo.neon {
-  filter: drop-shadow(0 0 3px var(--neon)) drop-shadow(0 0 10px rgba(246, 56, 49, 0.5));
+/* só a nave brilha; o letreiro fica no vermelho chapado */
+.header__logo {
+  filter: none;
 }
 
 .header__ufo {
   width: 34px;
   height: 34px;
+  filter: drop-shadow(0 0 3px var(--neon)) drop-shadow(0 0 10px rgba(246, 56, 49, 0.5));
 }
 
 .header__mark {

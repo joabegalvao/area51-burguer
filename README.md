@@ -312,6 +312,7 @@ Digital está atualizado.
 | Versão inicial da página | todos |
 | Hero reorganizado em dois painéis no desktop, para o texto não cobrir o letreiro da fachada | `styles.css` |
 | Disco voador em neon, desenhado por código, antes do letreiro no cabeçalho, no fecho e no rodapé; vira o favicon | `index.html`, `styles.css`, `tools/logo/nave.svg`, `tools/render-compartilhamento.js`, `assets/img` |
+| No cabeçalho, só a nave brilha; o letreiro fica no vermelho chapado, a pedido do cliente | `index.html`, `styles.css` |
 
 ## Créditos e licenças
 
