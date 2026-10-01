@@ -596,7 +596,7 @@ strong {
 
 .hero__bg img {
   object-fit: cover;
-  object-position: 50% 35%;
+  object-position: 50% 30%;
 }
 
 .hero__bg::after {
@@ -629,7 +629,7 @@ strong {
 .hero__claim {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 1.1rem + 5vw, 4.75rem);
+  font-size: clamp(2.25rem, 1.2rem + 3.6vw, 3.75rem);
   line-height: 1.04;
   letter-spacing: 0.005em;
   text-wrap: balance;
@@ -700,9 +700,56 @@ strong {
   }
 }
 
+/* No desktop o hero divide em dois: painel escuro com o texto à esquerda e a
+   fachada inteira à direita, sem nada por cima do letreiro de neon. */
 @media (min-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
+    align-items: stretch;
+    min-height: min(100svh, 860px);
+    padding: 0;
+  }
+
+  .hero__bg,
+  .hero__bg img {
+    position: relative;
+    inset: auto;
+  }
+
+  .hero__bg {
+    grid-column: 2;
+    grid-row: 1;
+    overflow: hidden;
+  }
+
+  .hero__bg img {
+    height: 100%;
+    min-height: 100%;
+    object-position: 55% 50%;
+  }
+
+  /* só um escurecimento leve nas bordas, para a foto encostar no painel */
+  .hero__bg::after {
+    background: linear-gradient(90deg, rgba(26, 15, 10, 0.55) 0%, rgba(26, 15, 10, 0) 18%);
+  }
+
   .hero__inner {
-    max-width: 820px;
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+    max-width: none;
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 56px;
+    padding-right: clamp(32px, 4vw, 64px);
+    padding-left: clamp(32px, 5vw, 96px);
+  }
+
+  .hero__claim {
+    font-size: clamp(2.5rem, 1rem + 2.6vw, 3.5rem);
+  }
+
+  .hero__lead {
+    max-width: 30em;
   }
 }
 

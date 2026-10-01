@@ -100,9 +100,12 @@ One (títulos, com peso de letreiro de lanchonete) e Rubik (textos).
 
 É um layout diferente dos outros projetos desta série, de propósito:
 
-- **Hero em tela cheia** com a foto da fachada à noite. O letreiro de neon da
-  foto é o logo do hero; o título é a frase "Hambúrguer artesanal, sem
-  miséria."
+- **Hero com a fachada à noite.** No desktop, dois painéis: o texto num
+  painel escuro à esquerda e a foto inteira à direita, sem nada por cima do
+  letreiro de neon (uma primeira versão punha o texto sobre a foto e cobria o
+  letreiro; o cliente pediu para reorganizar). No celular, a foto fica atrás
+  do texto, escurecida. O letreiro de neon da foto é o logo do hero; o título
+  é a frase "Hambúrguer artesanal, sem miséria."
 - **Letreiro corrido** abaixo do hero, com as palavras do friso da fachada
   (Burgers, Shakes, Good vibes, Hambúrgueres artesanais), em movimento
   contínuo.
@@ -130,7 +133,7 @@ tábuas.
 | Ordem | Seção | Âncora | Conteúdo |
 | --- | --- | --- | --- |
 | 1 | Cabeçalho | | Letreiro, navegação e "Pedir agora". Fixo, translúcido sobre o hero e sólido ao rolar |
-| 2 | Hero | `#inicio` | Fachada à noite, "Hambúrguer artesanal, sem miséria.", pedir e ver o que tem, nota 4,4 em 579 avaliações |
+| 2 | Hero | `#inicio` | Painel de texto e fachada à noite lado a lado (no celular, foto atrás do texto): "Hambúrguer artesanal, sem miséria.", pedir e ver o que tem, nota 4,4 em 579 avaliações |
 | 3 | Letreiro corrido | | Burgers, Shakes, Good vibes, Hambúrgueres artesanais, Av. Paraná, 1591 |
 | 4 | Na chapa | `#na-chapa` | Foto da chapa com adesivo, cardápio em quatro linhas e link para o cardápio completo |
 | 5 | Fotos | `#fotos` | Seis polaroids em trilho horizontal sobre madeira, link para o Instagram |
@@ -298,6 +301,7 @@ Digital está atualizado.
 | Ajuste | Arquivos |
 | --- | --- |
 | Versão inicial da página | todos |
+| Hero reorganizado em dois painéis no desktop, para o texto não cobrir o letreiro da fachada | `styles.css` |
 
 ## Créditos e licenças
 
