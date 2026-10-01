@@ -45,6 +45,7 @@ Recebidos em 01/10/2026.
 | Instagram | https://www.instagram.com/area51burger_/ |
 | Endereço | Av. Paraná, 1591, Zona 07, Maringá |
 | Nota | 4,4 no Google |
+| Frases do Instagram (enviadas depois) | "Best burger in this galaxy"; "Eleito o melhor burger de Maringá 2025"; "Todos os dias das 18h às 23h30"; "Um burger que chegou para provar que combinações diferentes podem dar MUITO certo"; "O Metaverso é um dos nossos burgers premiados no @maringafoodfestival, com ingredientes diferentes e uma combinação que conquistou muita gente por aqui." |
 
 O briefing trazia "Produto ou serviço principal: peças para carros, caminhões,
 camionetas" e "Público-alvo: pessoas que possuem automóveis", textos que
@@ -148,15 +149,16 @@ tábuas.
 | Ordem | Seção | Âncora | Conteúdo |
 | --- | --- | --- | --- |
 | 1 | Cabeçalho | | Disco voador e letreiro em neon, navegação e "Pedir agora". Fixo, translúcido sobre o hero e sólido ao rolar |
-| 2 | Hero | `#inicio` | Painel de texto e imagem da fachada lado a lado (no celular, imagem atrás do texto): "Baita hambúrguer, sem miséria.", pedir e ver o que tem, nota 4,4 em 579 avaliações |
-| 3 | Letreiro corrido | | Hambúrguer, Batata, Frango empanado, Nota 4,4 no Google, Av. Paraná, 1591 |
-| 4 | Na chapa | `#na-chapa` | Foto da chapa com adesivo, cardápio em quatro linhas (hambúrgueres, batata, frango, para levar) e link para o cardápio completo |
-| 5 | Fotos | `#fotos` | Seis polaroids em trilho horizontal sobre madeira, link para o Instagram |
-| 6 | Avaliações | `#avaliacoes` | Nota 4,4 com contador, estrelas e três cupons |
-| 7 | Como pedir | `#como-pedir` | App oficial (destaque), WhatsApp e endereço |
-| 8 | Onde fica | `#onde-fica` | Endereço, WhatsApp, Instagram, app e mapa |
-| 9 | Chamada final | | Letreiro neon piscando, "Bateu a fome? A chapa está ligada.", pedir e WhatsApp |
-| 10 | Rodapé | | Endereço com CEP, contato, pedidos |
+| 2 | Hero | `#inicio` | Rótulo "Best burger in this galaxy", painel de texto e imagem da fachada lado a lado (no celular, imagem atrás do texto): "Baita hambúrguer, sem miséria.", pedir e ver o que tem, prêmio 2025, horário e nota 4,4 em 579 avaliações |
+| 3 | Letreiro corrido | | Best burger in this galaxy, Melhor burger de Maringá 2025, Todos os dias 18h às 23h30, Av. Paraná, 1591, Nota 4,4 no Google |
+| 4 | Na chapa | `#na-chapa` | Foto da chapa com adesivo, cardápio em cinco linhas (Metaverso, hambúrgueres, batata, frango, para levar) e link para o cardápio completo |
+| 5 | O premiado | `#premiado` | Selo "Eleito o melhor burger de Maringá 2025" e o Metaverso, premiado no Maringá Food Festival, com link para o perfil do festival |
+| 6 | Fotos | `#fotos` | Seis polaroids em trilho horizontal sobre madeira, link para o Instagram |
+| 7 | Avaliações | `#avaliacoes` | Nota 4,4 com contador, estrelas e três cupons |
+| 8 | Como pedir | `#como-pedir` | App oficial (destaque), WhatsApp e endereço com horário |
+| 9 | Onde fica | `#onde-fica` | Endereço, WhatsApp, horário, Instagram, app e mapa |
+| 10 | Chamada final | | Letreiro neon piscando, "Bateu a fome? A chapa está ligada.", horário, pedir e WhatsApp |
+| 11 | Rodapé | | Prêmio, horário, endereço com CEP, contato, pedidos |
 
 Componente de apoio: botão flutuante de WhatsApp, no canto inferior direito,
 em todas as telas.
@@ -216,7 +218,9 @@ Se o cliente enviar o logo em vetor, basta trocar o `<path>` do símbolo
 | O que mudar | Onde |
 | --- | --- |
 | Textos e endereço | `index.html` (seções comentadas) |
-| Link de pedidos | `index.html`: procure por `pratodigital.com.br` (7 ocorrências) e o bloco JSON-LD |
+| Link de pedidos | `index.html`: procure por `pratodigital.com.br` (8 ocorrências) e o bloco JSON-LD |
+| Horário | `index.html`: hero, letreiro corrido, "Como pedir", "Onde fica", chamada final, rodapé, `description` e o bloco JSON-LD (`openingHoursSpecification`) |
+| Prêmio | `index.html`: hero, letreiro corrido, seção "O PREMIADO", rodapé, `description` e JSON-LD (`award`) |
 | Número e mensagem do WhatsApp | `index.html`: procure por `wa.me/` (5 ocorrências). O texto vem depois de `?text=`, codificado |
 | Mapa | `index.html`: procure por `google.com/maps` (5 ocorrências, uma delas no `<iframe>`) |
 | Nota e número de avaliações | `index.html`: hero (`rating`), seção "AVALIAÇÕES" (`data-count` e título) e JSON-LD |
@@ -275,6 +279,13 @@ Tipografia: Alfa Slab One (títulos, legendas e rótulos de cupom) e Rubik
   levar) vêm das fotos; as observações, das avaliações. Preços e o cardápio
   completo ficam no app, e a página diz isso.
 - "Perto da Av. Colombo" vem do mapa do Google.
+- O prêmio ("Eleito o melhor burger de Maringá 2025"), o horário ("todos os
+  dias das 18h às 23h30"), o slogan ("Best burger in this galaxy") e o
+  Metaverso (premiado no Maringá Food Festival) vêm das frases do Instagram
+  que o cliente enviou, reproduzidas como estão. A página não diz quem
+  concedeu o prêmio de 2025 nem em que categoria, porque isso não foi
+  informado; o link do festival vai para o perfil @maringafoodfestival
+  citado na frase.
 - "Montado na chapa na hora do pedido" descreve a foto da chapa.
 - "Pedidos para entrega são feitos pelos aplicativos oficiais" vem do
   briefing. A página não nomeia os aplicativos, porque eles não foram
@@ -299,8 +310,8 @@ Executados em 01/10/2026, em Chromium automatizado (Playwright).
   fora, foco), âncoras, botão flutuante de WhatsApp (posição, nome acessível,
   sem cobrir o texto do rodapé), fotos sem ampliação acima do tamanho real,
   mapa com título e carregamento adiado, revelação na rolagem, link de pular
-  para o conteúdo, foco visível, destino e atributos de todos os links (7 de
-  pedido, 5 de WhatsApp, 3 de Instagram, 4 de mapa, nenhum destino fora de
+  para o conteúdo, foco visível, destino e atributos de todos os links (8 de
+  pedido, 5 de WhatsApp, 4 de Instagram, 4 de mapa, nenhum destino fora de
   wa.me, instagram, google e pratodigital), hierarquia de títulos e atributos
   das imagens, sem travessões, emojis ou textos de exemplo.
 - O mapa foi aberto no teste e mostrou o marcador "Area 51 Burguer" na Av.
@@ -327,6 +338,7 @@ Digital está atualizado.
 | Disco voador em neon, desenhado por código, antes do letreiro no cabeçalho, no fecho e no rodapé; vira o favicon | `index.html`, `styles.css`, `tools/logo/nave.svg`, `tools/render-compartilhamento.js`, `assets/img` |
 | No cabeçalho, só a nave brilha; o letreiro fica no vermelho chapado, a pedido do cliente | `index.html`, `styles.css` |
 | Cliente avisou que a fachada é gerada por IA: todas as frases tiradas dela saíram (shakes, good vibes, artesanal, "como diz o letreiro", esquina) | `index.html`, `tools/render-compartilhamento.js`, `assets/img` |
+| Frases do Instagram: prêmio 2025, horário, slogan "Best burger in this galaxy" e a seção "O premiado" com o Metaverso | `index.html`, `styles.css` |
 
 ## Créditos e licenças
 
@@ -344,7 +356,10 @@ Digital está atualizado.
   150 px.
 - **Nomes dos aplicativos de entrega** (iFood, etc.), se quiserem citá-los,
   e o link de cada um.
-- Horário de funcionamento e formas de pagamento.
+- Formas de pagamento.
+- Quem concedeu o prêmio "melhor burger de Maringá 2025" e em que categoria,
+  para a página poder citar a fonte.
+- Foto do Metaverso, para a seção "O premiado".
 - Cardápio com nomes dos lanches e preços, se quiserem na página; hoje ela
   manda para o app.
 - **Foto real da fachada**, para substituir a imagem gerada por IA.

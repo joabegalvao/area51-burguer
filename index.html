@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Area 51 Burger | Hamburgueria em Maringá PR, na Av. Paraná</title>
-  <meta name="description" content="Area 51 Burger: hambúrguer sem miséria, batata e frango empanado na Av. Paraná, 1591, Zona 07, Maringá PR. Nota 4,4 no Google. Peça pelo app oficial ou chame no WhatsApp (44) 99883-6610.">
+  <meta name="description" content="Area 51 Burger, eleito o melhor burger de Maringá 2025: hambúrguer sem miséria, batata e frango empanado na Av. Paraná, 1591, Zona 07. Todos os dias das 18h às 23h30. Nota 4,4 no Google. Peça pelo app oficial ou chame no WhatsApp (44) 99883-6610.">
   <meta name="theme-color" content="#1a0f0a">
 
   <meta property="og:type" content="restaurant">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Area 51 Burger">
-  <meta property="og:title" content="Area 51 Burger | Baita hambúrguer, sem miséria">
-  <meta property="og:description" content="Hambúrguer, batata e frango empanado na Av. Paraná, 1591, Maringá PR. Nota 4,4 no Google. Peça pelo app oficial.">
+  <meta property="og:title" content="Area 51 Burger | Best burger in this galaxy">
+  <meta property="og:description" content="Eleito o melhor burger de Maringá 2025. Av. Paraná, 1591, todos os dias das 18h às 23h30. Nota 4,4 no Google. Peça pelo app oficial.">
   <meta property="og:image" content="assets/img/compartilhamento.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -33,6 +33,14 @@
     "name": "Area 51 Burger",
     "alternateName": "Area 51 Burguer",
     "servesCuisine": "Hambúrguer",
+    "slogan": "Best burger in this galaxy",
+    "award": "Eleito o melhor burger de Maringá 2025",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "18:00",
+      "closes": "23:30"
+    },
     "description": "Hamburgueria em Maringá PR: hambúrguer, batata e frango empanado, para comer no local ou pedir pelo app oficial.",
     "image": "assets/img/compartilhamento.jpg",
     "telephone": "+55 44 99883-6610",
@@ -78,6 +86,19 @@
       <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5 8h14l-1 12H6z"/>
         <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+      </g>
+    </symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 4h10v5a5 5 0 0 1-10 0z"/>
+        <path d="M7 6H4.5a1 1 0 0 0-1 1.1C3.8 9.6 5.3 11 7.5 11M17 6h2.5a1 1 0 0 1 1 1.1c-.3 2.5-1.8 3.9-4 3.9"/>
+        <path d="M12 14v3M8.5 20h7M10 17h4l.6 3H9.4z"/>
+      </g>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="8.5"/>
+        <path d="M12 7.5V12l3 2"/>
       </g>
     </symbol>
     <symbol id="i-star" viewBox="0 0 24 24">
@@ -129,6 +150,7 @@
       <nav class="nav" id="menu" aria-label="Navegação principal" data-menu>
         <ul class="nav__list">
           <li><a href="#na-chapa">Na chapa</a></li>
+          <li><a href="#premiado">O premiado</a></li>
           <li><a href="#fotos">Fotos</a></li>
           <li><a href="#avaliacoes">Avaliações</a></li>
           <li><a href="#como-pedir">Como pedir</a></li>
@@ -152,7 +174,7 @@
         <img src="assets/img/fachada-noite-1600.jpg" alt="" width="1600" height="922" fetchpriority="high" decoding="async">
       </picture>
       <div class="container hero__inner">
-        <p class="eyebrow">Hamburgueria na Av. Paraná, Maringá</p>
+        <p class="eyebrow">Best burger in this galaxy</p>
         <h1 class="hero__title" id="hero-title">
           <span class="sr-only">Area 51 Burger: </span>
           <span class="hero__claim">Baita hambúrguer, <em>sem miséria.</em></span>
@@ -169,6 +191,10 @@
             <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
           </a>
         </div>
+        <ul class="hero__proof" aria-label="Prêmio e horário">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg> Eleito o melhor burger de Maringá 2025</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Todos os dias, das 18h às 23h30</li>
+        </ul>
         <p class="rating" aria-label="Nota 4,4 no Google, com 579 avaliações">
           <span class="rating__stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon icon--half"><use href="#i-star"/></svg></span>
           <span class="rating__text"><strong>4,4</strong> no Google, em 579 avaliações</span>
@@ -179,8 +205,8 @@
     <!-- Letreiro corrido, com o que a casa serve e onde fica -->
     <div class="ticker" aria-hidden="true">
       <div class="ticker__track">
-        <span>Hambúrguer</span><i></i><span>Batata</span><i></i><span>Frango empanado</span><i></i><span>Nota 4,4 no Google</span><i></i><span>Av. Paraná, 1591</span><i></i>
-        <span>Hambúrguer</span><i></i><span>Batata</span><i></i><span>Frango empanado</span><i></i><span>Nota 4,4 no Google</span><i></i><span>Av. Paraná, 1591</span><i></i>
+        <span>Best burger in this galaxy</span><i></i><span>Melhor burger de Maringá 2025</span><i></i><span>Todos os dias, 18h às 23h30</span><i></i><span>Av. Paraná, 1591</span><i></i><span>Nota 4,4 no Google</span><i></i>
+        <span>Best burger in this galaxy</span><i></i><span>Melhor burger de Maringá 2025</span><i></i><span>Todos os dias, 18h às 23h30</span><i></i><span>Av. Paraná, 1591</span><i></i><span>Nota 4,4 no Google</span><i></i>
       </div>
     </div>
 
@@ -201,6 +227,11 @@
           <p class="section__lead" data-reveal>Hambúrguer montado na chapa na hora do pedido, batata de acompanhar e frango empanado para dividir. É o que aparece nas fotos da casa, e é o que as avaliações falam.</p>
 
           <ul class="menu-lines" data-reveal>
+            <li class="menu-line">
+              <span class="menu-line__name">Metaverso</span>
+              <span class="menu-line__dots" aria-hidden="true"></span>
+              <span class="menu-line__note">premiado no Maringá Food Festival</span>
+            </li>
             <li class="menu-line">
               <span class="menu-line__name">Hambúrgueres</span>
               <span class="menu-line__dots" aria-hidden="true"></span>
@@ -228,6 +259,31 @@
               Ver o cardápio e pedir
               <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               <span class="sr-only">(abre o app oficial em nova aba)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ O PREMIADO ============ -->
+    <section class="section section--dark award" id="premiado" aria-labelledby="award-title">
+      <div class="container award__grid">
+        <div class="award__badge" data-reveal>
+          <svg class="award__trophy" aria-hidden="true"><use href="#i-trophy"/></svg>
+          <p class="award__label">Eleito o melhor burger<br>de Maringá <strong>2025</strong></p>
+        </div>
+        <div class="award__content">
+          <p class="eyebrow" data-reveal>O premiado</p>
+          <h2 class="section__title" id="award-title" data-reveal>Metaverso: combinações diferentes <em>podem dar muito certo.</em></h2>
+          <p class="section__lead" data-reveal>Um dos burgers da casa premiados no Maringá Food Festival, com ingredientes diferentes e uma combinação que conquistou muita gente por aqui. Um burger que chegou para provar que combinações diferentes podem dar muito certo.</p>
+          <div class="award__actions" data-reveal>
+            <a class="btn btn--red" href="https://pratodigital.com.br/area51/" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>
+              Pedir o Metaverso
+              <span class="sr-only">pelo app oficial (abre em nova aba)</span>
+            </a>
+            <a class="link-arrow link-arrow--light" href="https://www.instagram.com/maringafoodfestival/" target="_blank" rel="noopener">
+              @maringafoodfestival<span class="sr-only"> (abre em nova aba)</span>
             </a>
           </div>
         </div>
@@ -328,7 +384,7 @@
           <li class="way">
             <span class="way__num">03</span>
             <h3 class="way__title">Na Av. Paraná</h3>
-            <p class="way__text">Av. Paraná, 1591, Zona 07, perto da Av. Colombo. Para comer na hora.</p>
+            <p class="way__text">Av. Paraná, 1591, Zona 07, perto da Av. Colombo. Todos os dias, das 18h às 23h30.</p>
             <a class="btn btn--outline-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Area+51+Burguer%2C+Av.+Paran%C3%A1%2C+1591%2C+Maring%C3%A1+PR" target="_blank" rel="noopener">
               <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
               Como chegar
@@ -364,6 +420,13 @@
               </a>
             </li>
             <li>
+              <span class="contacts__static">
+                <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                <span class="contacts__label">Horário</span>
+                <span class="contacts__value">Todos os dias<br>das 18h às 23h30</span>
+              </span>
+            </li>
+            <li>
               <a href="https://www.instagram.com/area51burger_/" target="_blank" rel="noopener">
                 <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
                 <span class="contacts__label">Instagram</span>
@@ -380,7 +443,7 @@
               </a>
             </li>
           </ul>
-          <p class="visit__hint" data-reveal>Confirme o horário de funcionamento no Instagram ou pelo WhatsApp antes de vir.</p>
+          <p class="visit__hint" data-reveal>Pedidos para entrega pelos aplicativos oficiais; dúvidas pelo WhatsApp.</p>
         </div>
 
         <div class="map" data-reveal>
@@ -405,6 +468,7 @@
           <svg class="closing__mark" aria-hidden="true"><use href="#letreiro"/></svg>
         </div>
         <h2 class="closing__title" id="closing-title" data-reveal>Bateu a fome? <em>A chapa está ligada.</em></h2>
+        <p class="closing__text" data-reveal>Todos os dias, das 18h às 23h30. Best burger in this galaxy.</p>
         <div class="closing__actions" data-reveal>
           <a class="btn btn--red btn--big" href="https://pratodigital.com.br/area51/" target="_blank" rel="noopener">
             <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>
@@ -430,7 +494,7 @@
           <svg class="footer__ufo" aria-hidden="true"><use href="#nave"/></svg>
           <svg class="footer__mark" aria-hidden="true"><use href="#letreiro"/></svg>
         </div>
-        <p>Hambúrguer, batata e frango empanado. Para comer na Av. Paraná ou pedir pelo app oficial.</p>
+        <p>Eleito o melhor burger de Maringá 2025. Todos os dias, das 18h às 23h30, na Av. Paraná, 1591, ou pelo app oficial.</p>
       </div>
 
       <div class="footer__col">
