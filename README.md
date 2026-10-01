@@ -31,6 +31,26 @@ materiais-de-origem/
 Não foram recebidas fotos de perfil das avaliações; a página mostra só os
 nomes.
 
+## Repositório
+
+| Item | Valor |
+| --- | --- |
+| Endereço | `git@github.com:joabegalvao/area51-burguer.git` |
+| Página | https://github.com/joabegalvao/area51-burguer |
+| Visibilidade | pública (conferida em 01/10/2026) |
+| Branch | `main` |
+| Também em | https://gostoudosite.com.br/area51-burguer/ (portfólio da agência) |
+
+O repositório guarda só o que o site precisa para funcionar e ser mantido:
+`index.html`, `assets/`, `tools/`, `README.md` e `.gitignore`.
+
+```bash
+git clone git@github.com:joabegalvao/area51-burguer.git
+```
+
+Um clone novo abre e publica o site normalmente. Só não roda o script de
+imagens, que depende da pasta `materiais-de-origem/`.
+
 ## Dados do cliente
 
 Recebidos em 01/10/2026.
