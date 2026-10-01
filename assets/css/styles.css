@@ -437,8 +437,19 @@ strong {
   flex: none;
   display: flex;
   align-items: center;
+  gap: 10px;
   min-height: 44px;
   color: var(--red);
+}
+
+/* o brilho do cabeçalho é mais discreto que o do fecho */
+.header__logo.neon {
+  filter: drop-shadow(0 0 3px var(--neon)) drop-shadow(0 0 10px rgba(246, 56, 49, 0.5));
+}
+
+.header__ufo {
+  width: 34px;
+  height: 34px;
 }
 
 .header__mark {
@@ -448,6 +459,11 @@ strong {
 }
 
 @media (min-width: 980px) {
+  .header__ufo {
+    width: 40px;
+    height: 40px;
+  }
+
   .header__mark {
     height: 36px;
   }
@@ -1350,13 +1366,26 @@ strong {
   align-items: center;
 }
 
+.closing__sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.closing__ufo {
+  width: clamp(96px, 16vw, 150px);
+  height: auto;
+  aspect-ratio: 1;
+}
+
 .closing__mark {
   width: min(80vw, 420px);
   height: auto;
   aspect-ratio: 1052 / 253;
 }
 
-.motion-ok .closing__mark.is-visible {
+.motion-ok .closing__sign.is-visible {
   animation: neon-on 2.4s steps(1, end) 1;
 }
 
@@ -1405,11 +1434,22 @@ strong {
   gap: 40px;
 }
 
+.footer__sign {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--red);
+}
+
+.footer__ufo {
+  width: 44px;
+  height: 44px;
+}
+
 .footer__mark {
-  width: 180px;
+  width: 160px;
   height: auto;
   aspect-ratio: 1052 / 253;
-  color: var(--red);
 }
 
 .footer__brand p {

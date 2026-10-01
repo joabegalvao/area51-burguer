@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Disco voador do neon da fachada, desenhado por código: cúpula, disco com
+       três luzes, feixe de abdução e a silhueta de alguém sendo levado.
+       A cor vem de quem usa (currentColor). -->
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- cúpula -->
+    <path d="M22 20c2-7 6-10 10-10s8 3 10 10"/>
+    <!-- disco -->
+    <path d="M6 24c0-3 12-6 26-6s26 3 26 6-12 7-26 7S6 27 6 24z"/>
+    <!-- feixe -->
+    <path d="M24 33 16 58h32l-8-25"/>
+  </g>
+  <!-- luzes do disco -->
+  <g fill="currentColor">
+    <circle cx="20" cy="25" r="2"/><circle cx="32" cy="26" r="2"/><circle cx="44" cy="25" r="2"/>
+  </g>
+  <!-- silhueta -->
+  <g fill="currentColor">
+    <circle cx="32" cy="39" r="2.6"/>
+    <path d="M30.2 42.5h3.6l1.2 6.5h-1.4l1.6 6h-2.2l-1-4.6-1 4.6h-2.2l1.6-6h-1.4z"/>
+    <path d="M28 44.5l2.4-2.2M36 44.5l-2.4-2.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

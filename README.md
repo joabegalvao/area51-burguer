@@ -116,8 +116,11 @@ One (títulos, com peso de letreiro de lanchonete) e Rubik (textos).
   com rolagem por arrasto e encaixe.
 - **Avaliações em cupons de caixa**, com a borda serrilhada, sobre vermelho
   escuro; a nota 4,4 sobe de 0 quando aparece na tela.
-- **Letreiro vetorizado em neon** no cabeçalho, na chamada final e no rodapé;
-  no fecho ele "acende" piscando quando entra na tela.
+- **Letreiro vetorizado em neon** no cabeçalho, na chamada final e no rodapé,
+  sempre com o **disco voador** do neon da fachada ao lado, desenhado por
+  código (`tools/logo/nave.svg`: cúpula, disco com três luzes, feixe e a
+  silhueta sendo abduzida); no fecho os dois "acendem" piscando quando entram
+  na tela. O disco também é o favicon.
 - Foto da chapa inclina com o mouse; os cupons entram um depois do outro;
   cabeçalho fica sólido ao rolar.
 
@@ -132,7 +135,7 @@ tábuas.
 
 | Ordem | Seção | Âncora | Conteúdo |
 | --- | --- | --- | --- |
-| 1 | Cabeçalho | | Letreiro, navegação e "Pedir agora". Fixo, translúcido sobre o hero e sólido ao rolar |
+| 1 | Cabeçalho | | Disco voador e letreiro em neon, navegação e "Pedir agora". Fixo, translúcido sobre o hero e sólido ao rolar |
 | 2 | Hero | `#inicio` | Painel de texto e fachada à noite lado a lado (no celular, foto atrás do texto): "Hambúrguer artesanal, sem miséria.", pedir e ver o que tem, nota 4,4 em 579 avaliações |
 | 3 | Letreiro corrido | | Burgers, Shakes, Good vibes, Hambúrgueres artesanais, Av. Paraná, 1591 |
 | 4 | Na chapa | `#na-chapa` | Foto da chapa com adesivo, cardápio em quatro linhas e link para o cardápio completo |
@@ -156,6 +159,7 @@ assets/img/                      imagens otimizadas (geradas pelos scripts)
 assets/fonts/                    Alfa Slab One e Rubik (arquivos locais)
 tools/optimize-images.py         gera as fotos de assets/img a partir dos originais
 tools/logo/letreiro.svg          letreiro "Area 51" vetorizado a partir do logo
+tools/logo/nave.svg              disco voador do neon da fachada, desenhado por código
 tools/render-compartilhamento.js gera os ícones e a imagem de compartilhamento pelo Chromium
 materiais-de-origem/             arquivos do cliente (só na pasta local, fora do git)
 ```
@@ -185,6 +189,11 @@ letras é o do logo, e é o mesmo do letreiro de neon da fachada. Por ser vetor
 com `fill="currentColor"`, ele toma a cor de onde está e recebe o brilho de
 neon por filtro CSS. O creme quadriculado do fundo do logo virou a grade das
 seções claras.
+
+O disco voador (`tools/logo/nave.svg`, símbolo `#nave` no `index.html`) foi
+desenhado por código a partir do neon da fachada, em traço, para combinar com
+o letreiro. Os ícones do site usam só ele, porque o letreiro inteiro fica
+ilegível em 32 px.
 
 Se o cliente enviar o logo em vetor, basta trocar o `<path>` do símbolo
 `#letreiro` no `index.html` e o `tools/logo/letreiro.svg`, e rodar
@@ -302,12 +311,14 @@ Digital está atualizado.
 | --- | --- |
 | Versão inicial da página | todos |
 | Hero reorganizado em dois painéis no desktop, para o texto não cobrir o letreiro da fachada | `styles.css` |
+| Disco voador em neon, desenhado por código, antes do letreiro no cabeçalho, no fecho e no rodapé; vira o favicon | `index.html`, `styles.css`, `tools/logo/nave.svg`, `tools/render-compartilhamento.js`, `assets/img` |
 
 ## Créditos e licenças
 
 - Logo, fotos e avaliações: fornecidos pelo cliente. Letreiro vetorizado para
   este projeto a partir do logo recebido.
-- Ícones: criados para este projeto. Ícone do WhatsApp: Simple Icons (CC0).
+- Disco voador e demais ícones: criados para este projeto. Ícone do WhatsApp:
+  Simple Icons (CC0).
 - Alfa Slab One e Rubik: SIL Open Font License 1.1, obtidas do Google Fonts e
   hospedadas localmente.
 - Mapa: Google Maps, incorporado.
