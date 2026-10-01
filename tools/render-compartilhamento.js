@@ -43,7 +43,7 @@ const pages = {
     html: `<div style="width:1200px;height:630px;display:grid;grid-template-columns:640px 560px;background:#1a0f0a;color:#fdf3e9;font-family:Rubik,sans-serif;overflow:hidden">
       <div style="display:flex;flex-direction:column;justify-content:center;padding:0 64px">
         <div style="display:flex;align-items:center;gap:22px;color:#e62129;filter:drop-shadow(0 0 4px #f63831) drop-shadow(0 0 18px rgba(246,56,49,.65)) drop-shadow(0 0 40px rgba(246,56,49,.35))">${ship(110)}${mark(360)}</div>
-        <div style="margin-top:40px;font-family:'Alfa Slab One',serif;font-size:44px;line-height:1.06">Hambúrguer artesanal,<br><span style="color:#f2b134">sem miséria.</span></div>
+        <div style="margin-top:40px;font-family:'Alfa Slab One',serif;font-size:44px;line-height:1.06">Baita hambúrguer,<br><span style="color:#f2b134">sem miséria.</span></div>
         <div style="margin-top:22px;font-size:17px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#c9b3a4">Av. Paraná, 1591, Maringá PR</div>
       </div>
       <img src="file://${path.join(out, photo)}" style="width:560px;height:630px;object-fit:cover;object-position:50% 40%;display:block" alt="">

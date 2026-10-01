@@ -25,7 +25,7 @@ estão prontas em `assets/img`.
 ```
 materiais-de-origem/
   logo/    area51 logo.jpg (150 x 150 px, letreiro vermelho sobre creme quadriculado)
-  fotos/   fachada.png (1652 x 952, a esquina à noite) e seis capturas do Instagram
+  fotos/   fachada.png (1652 x 952, imagem gerada por IA, veja abaixo) e seis capturas do Instagram
 ```
 
 Não foram recebidas fotos de perfil das avaliações; a página mostra só os
@@ -51,6 +51,16 @@ camionetas" e "Público-alvo: pessoas que possuem automóveis", textos que
 sobraram do projeto anterior desta série (Geral Peças). Não foram
 considerados; o conteúdo segue o segmento, as fotos, o letreiro da fachada e
 as avaliações.
+
+**A imagem da fachada é gerada por IA**, não é uma foto do lugar: o cliente
+avisou durante o projeto. Por isso nada do que está escrito nela (o friso
+"Burgers, Shakes, Good vibes", "Hambúrgueres artesanais", "Good food good
+people", o disco voador e o letreiro de neon) é tratado como fato. Uma
+primeira versão da página citava essas frases; todas foram trocadas por
+conteúdo apoiado nas avaliações, nas fotos reais da comida e no endereço. A
+imagem continua no hero como ilustração da marca, por decisão do cliente.
+Se a casa tiver uma foto real da fachada, ela deve substituir a imagem
+(mesmo nome de arquivo, e rodar `python3 tools/optimize-images.py`).
 
 O link de pedidos veio embrulhado pelo redirecionador do Instagram
 (`l.instagram.com/?u=...`), com parâmetros de rastreamento. A página usa o
@@ -78,21 +88,23 @@ Google e aparece no rodapé e no JSON-LD.
 Na página: vírgulas e pontos finais acrescentados, "quantidade/ qualidade"
 virou "quantidade e a qualidade", "hamburger" virou "hambúrguer",
 "viciadaaaaa!!" virou "viciada!" e o "kkkkkkk" saiu. O sentido não mudou.
-"Sem miséria", da avaliação de Juliety, virou a frase do hero.
+"Baita hambúrguer, sem miséria", da avaliação de Juliety, virou a frase do
+hero.
 
 ## Estratégia
 
 | Definição | Decisão |
 | --- | --- |
-| Proposta de valor | Hambúrguer artesanal feito na chapa, em porção generosa ("sem miséria"), na esquina da Av. Paraná ou em casa pelo app |
-| Principal objeção | "Hamburgueria artesanal é bonita e pequena": a página responde com as avaliações sobre quantidade e com as fotos |
+| Proposta de valor | Hambúrguer feito na chapa, em porção generosa ("sem miséria"), na Av. Paraná ou em casa pelo app |
+| Principal objeção | "Hamburgueria bonita é porção pequena": a página responde com as avaliações sobre quantidade e com as fotos |
 | Conversão prioritária | Pedir pelo app oficial (cardápio, combos, entrega e retirada) |
 | Ação secundária | WhatsApp, para dúvidas e pedidos combinados |
-| Ação de apoio | Ir até a esquina; seguir o Instagram |
+| Ação de apoio | Ir até a Av. Paraná; seguir o Instagram |
 
 ## Direção visual
 
-Bar americano com letreiro de neon, como a fachada: fundo escuro quente
+Bar americano com letreiro de neon, no clima da imagem da fachada: fundo
+escuro quente
 (marrom quase preto), o vermelho do logo em neon, creme quadriculado do fundo
 do logo nas seções claras, madeira do bar na galeria e um toque de amarelo
 mostarda nas estrelas e nos destaques sobre o escuro. Tipografia Alfa Slab
@@ -104,11 +116,11 @@ One (títulos, com peso de letreiro de lanchonete) e Rubik (textos).
   painel escuro à esquerda e a foto inteira à direita, sem nada por cima do
   letreiro de neon (uma primeira versão punha o texto sobre a foto e cobria o
   letreiro; o cliente pediu para reorganizar). No celular, a foto fica atrás
-  do texto, escurecida. O letreiro de neon da foto é o logo do hero; o título
-  é a frase "Hambúrguer artesanal, sem miséria."
-- **Letreiro corrido** abaixo do hero, com as palavras do friso da fachada
-  (Burgers, Shakes, Good vibes, Hambúrgueres artesanais), em movimento
-  contínuo.
+  do texto, escurecida. O título é a frase "Baita hambúrguer, sem miséria.",
+  da avaliação de Juliety.
+- **Letreiro corrido** abaixo do hero, com o que a casa serve e onde fica
+  (Hambúrguer, Batata, Frango empanado, Nota 4,4 no Google, Av. Paraná,
+  1591), em movimento contínuo.
 - **Grade do logo** como fundo das seções claras.
 - **Cardápio com pontilhado**, como em um menu de balcão, com as observações
   tiradas das avaliações.
@@ -117,10 +129,10 @@ One (títulos, com peso de letreiro de lanchonete) e Rubik (textos).
 - **Avaliações em cupons de caixa**, com a borda serrilhada, sobre vermelho
   escuro; a nota 4,4 sobe de 0 quando aparece na tela.
 - **Letreiro vetorizado em neon** no cabeçalho, na chamada final e no rodapé,
-  sempre com o **disco voador** do neon da fachada ao lado, desenhado por
-  código (`tools/logo/nave.svg`: cúpula, disco com três luzes, feixe e a
-  silhueta sendo abduzida); no fecho os dois "acendem" piscando quando entram
-  na tela. O disco também é o favicon.
+  sempre com um **disco voador** ao lado, desenhado por código
+  (`tools/logo/nave.svg`: cúpula, disco com três luzes, feixe e a silhueta
+  sendo abduzida), pelo nome da casa; no fecho os dois "acendem" piscando
+  quando entram na tela. O disco também é o favicon.
 - Foto da chapa inclina com o mouse; os cupons entram um depois do outro;
   cabeçalho fica sólido ao rolar.
 
@@ -136,14 +148,14 @@ tábuas.
 | Ordem | Seção | Âncora | Conteúdo |
 | --- | --- | --- | --- |
 | 1 | Cabeçalho | | Disco voador e letreiro em neon, navegação e "Pedir agora". Fixo, translúcido sobre o hero e sólido ao rolar |
-| 2 | Hero | `#inicio` | Painel de texto e fachada à noite lado a lado (no celular, foto atrás do texto): "Hambúrguer artesanal, sem miséria.", pedir e ver o que tem, nota 4,4 em 579 avaliações |
-| 3 | Letreiro corrido | | Burgers, Shakes, Good vibes, Hambúrgueres artesanais, Av. Paraná, 1591 |
-| 4 | Na chapa | `#na-chapa` | Foto da chapa com adesivo, cardápio em quatro linhas e link para o cardápio completo |
+| 2 | Hero | `#inicio` | Painel de texto e imagem da fachada lado a lado (no celular, imagem atrás do texto): "Baita hambúrguer, sem miséria.", pedir e ver o que tem, nota 4,4 em 579 avaliações |
+| 3 | Letreiro corrido | | Hambúrguer, Batata, Frango empanado, Nota 4,4 no Google, Av. Paraná, 1591 |
+| 4 | Na chapa | `#na-chapa` | Foto da chapa com adesivo, cardápio em quatro linhas (hambúrgueres, batata, frango, para levar) e link para o cardápio completo |
 | 5 | Fotos | `#fotos` | Seis polaroids em trilho horizontal sobre madeira, link para o Instagram |
 | 6 | Avaliações | `#avaliacoes` | Nota 4,4 com contador, estrelas e três cupons |
 | 7 | Como pedir | `#como-pedir` | App oficial (destaque), WhatsApp e endereço |
 | 8 | Onde fica | `#onde-fica` | Endereço, WhatsApp, Instagram, app e mapa |
-| 9 | Chamada final | | Letreiro neon piscando, "Bateu a fome? O letreiro está aceso.", pedir e WhatsApp |
+| 9 | Chamada final | | Letreiro neon piscando, "Bateu a fome? A chapa está ligada.", pedir e WhatsApp |
 | 10 | Rodapé | | Endereço com CEP, contato, pedidos |
 
 Componente de apoio: botão flutuante de WhatsApp, no canto inferior direito,
@@ -168,7 +180,7 @@ materiais-de-origem/             arquivos do cliente (só na pasta local, fora d
 
 | Arquivo | Conteúdo | Tamanho | Onde aparece |
 | --- | --- | --- | --- |
-| `fachada.png` | A esquina à noite, com o neon do disco voador e o letreiro | 1652 x 952 | hero (reduzida a 1600 px) |
+| `fachada.png` | Imagem gerada por IA da fachada à noite, com neon | 1652 x 952 | hero (reduzida a 1600 px), como ilustração |
 | `Screenshot ... 155855.png` | Hambúrguer alto com bacon, no prato de borda vermelha | 659 x 884 | galeria e imagem de compartilhamento |
 | `Screenshot ... 160119.png` | Batata com carne desfiada | 664 x 886 | galeria |
 | `Screenshot ... 155905.png` | Mesa com três hambúrgueres e celular | 664 x 887 | galeria |
@@ -185,14 +197,14 @@ O logo veio em JPG de 150 x 150 px: letreiro "Area 51" vermelho sobre creme
 quadriculado. É pequeno demais para o cabeçalho e para os ícones, então o
 letreiro foi **vetorizado** a partir do arquivo (ampliado 8 vezes, suavizado
 e traçado com potrace) e está em `tools/logo/letreiro.svg`. O desenho das
-letras é o do logo, e é o mesmo do letreiro de neon da fachada. Por ser vetor
+letras é o do logo. Por ser vetor
 com `fill="currentColor"`, ele toma a cor de onde está e recebe o brilho de
 neon por filtro CSS. O creme quadriculado do fundo do logo virou a grade das
 seções claras.
 
 O disco voador (`tools/logo/nave.svg`, símbolo `#nave` no `index.html`) foi
-desenhado por código a partir do neon da fachada, em traço, para combinar com
-o letreiro. Os ícones do site usam só ele, porque o letreiro inteiro fica
+desenhado por código, em traço, pelo nome da casa; não é um letreiro que
+exista. Os ícones do site usam só ele, porque o letreiro inteiro fica
 ilegível em 32 px.
 
 Se o cliente enviar o logo em vetor, basta trocar o `<path>` do símbolo
@@ -255,13 +267,14 @@ Tipografia: Alfa Slab One (títulos, legendas e rótulos de cupom) e Rubik
 ## Decisões de conteúdo
 
 - Só foram usados dados fornecidos: nome, endereço, WhatsApp, Instagram, link
-  de pedidos, nota, fotos, avaliações e o que está escrito na fachada
-  ("Hambúrgueres artesanais", "Burgers, Shakes, Good vibes"). Não há preços,
-  horário, prazo de entrega, lista de combos nem "o melhor de Maringá" como
-  afirmação da casa (a frase aparece só dentro da avaliação de Vitória).
-- As quatro linhas do cardápio (hambúrgueres, batata, frango, shakes) vêm das
-  fotos e da fachada; as observações, das avaliações. Preços e o cardápio
+  de pedidos, nota, fotos reais e avaliações. Nada vem da imagem da fachada
+  (gerada por IA). Não há "artesanal", shakes, preços, horário, prazo de
+  entrega, lista de combos nem "o melhor de Maringá" como afirmação da casa
+  (a frase aparece só dentro da avaliação de Vitória).
+- As quatro linhas do cardápio (hambúrgueres, batata, frango empanado, para
+  levar) vêm das fotos; as observações, das avaliações. Preços e o cardápio
   completo ficam no app, e a página diz isso.
+- "Perto da Av. Colombo" vem do mapa do Google.
 - "Montado na chapa na hora do pedido" descreve a foto da chapa.
 - "Pedidos para entrega são feitos pelos aplicativos oficiais" vem do
   briefing. A página não nomeia os aplicativos, porque eles não foram
@@ -313,6 +326,7 @@ Digital está atualizado.
 | Hero reorganizado em dois painéis no desktop, para o texto não cobrir o letreiro da fachada | `styles.css` |
 | Disco voador em neon, desenhado por código, antes do letreiro no cabeçalho, no fecho e no rodapé; vira o favicon | `index.html`, `styles.css`, `tools/logo/nave.svg`, `tools/render-compartilhamento.js`, `assets/img` |
 | No cabeçalho, só a nave brilha; o letreiro fica no vermelho chapado, a pedido do cliente | `index.html`, `styles.css` |
+| Cliente avisou que a fachada é gerada por IA: todas as frases tiradas dela saíram (shakes, good vibes, artesanal, "como diz o letreiro", esquina) | `index.html`, `tools/render-compartilhamento.js`, `assets/img` |
 
 ## Créditos e licenças
 
@@ -333,7 +347,8 @@ Digital está atualizado.
 - Horário de funcionamento e formas de pagamento.
 - Cardápio com nomes dos lanches e preços, se quiserem na página; hoje ela
   manda para o app.
-- Fotos de shakes e do salão por dentro.
+- **Foto real da fachada**, para substituir a imagem gerada por IA.
+- Fotos do salão por dentro.
 - Telefone fixo, se existir.
 - Fotos de perfil das avaliações, se quiserem.
 - Domínio de publicação, para completar `og:image` com URL absoluta e adicionar
